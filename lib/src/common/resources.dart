@@ -12,13 +12,13 @@ class GroupsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Groups> get(String groupUniqueId, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<Groups> get(core.String groupUniqueId, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "{groupUniqueId}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (groupUniqueId == null) paramErrors.add("groupUniqueId is required");
     if (groupUniqueId != null) urlParams["groupUniqueId"] = groupUniqueId;
     if (optParams != null) {
@@ -51,13 +51,13 @@ class GroupsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Groups> patch(Groups request, String groupUniqueId, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<Groups> patch(Groups request, core.String groupUniqueId, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "{groupUniqueId}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (groupUniqueId == null) paramErrors.add("groupUniqueId is required");
     if (groupUniqueId != null) urlParams["groupUniqueId"] = groupUniqueId;
     if (optParams != null) {
@@ -90,13 +90,13 @@ class GroupsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Groups> update(Groups request, String groupUniqueId, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<Groups> update(Groups request, core.String groupUniqueId, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "{groupUniqueId}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (groupUniqueId == null) paramErrors.add("groupUniqueId is required");
     if (groupUniqueId != null) urlParams["groupUniqueId"] = groupUniqueId;
     if (optParams != null) {

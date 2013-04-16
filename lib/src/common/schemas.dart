@@ -4,85 +4,85 @@ part of groupssettings_v1_api_client;
 class Groups {
 
   /** Are external members allowed to join the group. */
-  String allowExternalMembers;
+  core.String allowExternalMembers;
 
   /** Is google allowed to contact admins. */
-  String allowGoogleCommunication;
+  core.String allowGoogleCommunication;
 
   /** If posting from web is allowed. */
-  String allowWebPosting;
+  core.String allowWebPosting;
 
   /** If the group is archive only */
-  String archiveOnly;
+  core.String archiveOnly;
 
   /** Default email to which reply to any message should go. */
-  String customReplyTo;
+  core.String customReplyTo;
 
   /** Default message deny notification message */
-  String defaultMessageDenyNotificationText;
+  core.String defaultMessageDenyNotificationText;
 
   /** Description of the group */
-  String description;
+  core.String description;
 
   /** Email id of the group */
-  String email;
+  core.String email;
 
   /** If this groups should be included in global address list or not. */
-  String includeInGlobalAddressList;
+  core.String includeInGlobalAddressList;
 
   /** If the contents of the group are archived. */
-  String isArchived;
+  core.String isArchived;
 
   /** The type of the resource. */
-  String kind;
+  core.String kind;
 
   /** Maximum message size allowed. */
-  int maxMessageBytes;
+  core.int maxMessageBytes;
 
   /** Can members post using the group email address. */
-  String membersCanPostAsTheGroup;
+  core.String membersCanPostAsTheGroup;
 
   /** Default message display font. Possible values are: DEFAULT_FONT FIXED_WIDTH_FONT */
-  String messageDisplayFont;
+  core.String messageDisplayFont;
 
   /** Moderation level for messages. Possible values are: MODERATE_ALL_MESSAGES MODERATE_NON_MEMBERS MODERATE_NEW_MEMBERS MODERATE_NONE */
-  String messageModerationLevel;
+  core.String messageModerationLevel;
 
   /** Name of the Group */
-  String name;
+  core.String name;
 
   /** Primary language for the group. */
-  String primaryLanguage;
+  core.String primaryLanguage;
 
   /** Whome should the default reply to a message go to. Possible values are: REPLY_TO_CUSTOM REPLY_TO_SENDER REPLY_TO_LIST REPLY_TO_OWNER REPLY_TO_IGNORE REPLY_TO_MANAGERS */
-  String replyTo;
+  core.String replyTo;
 
   /** Should the member be notified if his message is denied by owner. */
-  String sendMessageDenyNotification;
+  core.String sendMessageDenyNotification;
 
   /** Is the group listed in groups directory */
-  String showInGroupDirectory;
+  core.String showInGroupDirectory;
 
   /** Moderation level for messages detected as spam. Possible values are: ALLOW MODERATE SILENTLY_MODERATE REJECT */
-  String spamModerationLevel;
+  core.String spamModerationLevel;
 
   /** Permissions to invite members. Possbile values are: ALL_MEMBERS_CAN_INVITE ALL_MANAGERS_CAN_INVITE */
-  String whoCanInvite;
+  core.String whoCanInvite;
 
   /** Permissions to join the group. Possible values are: ANYONE_CAN_JOIN ALL_IN_DOMAIN_CAN_JOIN INVITED_CAN_JOIN CAN_REQUEST_TO_JOIN */
-  String whoCanJoin;
+  core.String whoCanJoin;
 
   /** Permissions to post messages to the group. Possible values are: NONE_CAN_POST ALL_MANAGERS_CAN_POST ALL_MEMBERS_CAN_POST ALL_IN_DOMAIN_CAN_POST ANYONE_CAN_POST */
-  String whoCanPostMessage;
+  core.String whoCanPostMessage;
 
   /** Permissions to view group. Possbile values are: ANYONE_CAN_VIEW ALL_IN_DOMAIN_CAN_VIEW ALL_MEMBERS_CAN_VIEW ALL_MANAGERS_CAN_VIEW */
-  String whoCanViewGroup;
+  core.String whoCanViewGroup;
 
   /** Permissions to view membership. Possbile values are: ALL_IN_DOMAIN_CAN_VIEW ALL_MEMBERS_CAN_VIEW ALL_MANAGERS_CAN_VIEW */
-  String whoCanViewMembership;
+  core.String whoCanViewMembership;
 
   /** Create new Groups from JSON data */
-  Groups.fromJson(Map json) {
+  Groups.fromJson(core.Map json) {
     if (json.containsKey("allowExternalMembers")) {
       allowExternalMembers = json["allowExternalMembers"];
     }
@@ -164,8 +164,8 @@ class Groups {
   }
 
   /** Create JSON Object for Groups */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (allowExternalMembers != null) {
       output["allowExternalMembers"] = allowExternalMembers;
@@ -250,7 +250,7 @@ class Groups {
   }
 
   /** Return String representation of Groups */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
