@@ -4,8 +4,8 @@ part of groupssettings_v1_api_browser;
 /** Lets you manage permission levels and related settings of a group. */
 class Groupssettings extends BrowserClient {
 
-  GroupsResource _groups;
-  GroupsResource get groups => _groups;
+  GroupsResource_ _groups;
+  GroupsResource_ get groups => _groups;
 
   /** OAuth Scope2: View and manage the settings of a Google Apps Group */
   static const core.String APPS_GROUPS_SETTINGS_SCOPE = "https://www.googleapis.com/auth/apps.groups.settings";
@@ -62,6 +62,6 @@ class Groupssettings extends BrowserClient {
   Groupssettings([oauth.OAuth2 auth]) : super(auth) {
     basePath = "/groups/v1/groups/";
     rootUrl = "https://www.googleapis.com:443/";
-    _groups = new GroupsResource(this);
+    _groups = new GroupsResource_(this);
   }
 }

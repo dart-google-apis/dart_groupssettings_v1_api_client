@@ -1,8 +1,8 @@
 part of groupssettings_v1_api_client;
 
-class GroupsResource extends Resource {
+class GroupsResource_ extends Resource {
 
-  GroupsResource(Client client) : super(client) {
+  GroupsResource_(Client client) : super(client) {
   }
 
   /**
@@ -30,7 +30,7 @@ class GroupsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -69,7 +69,7 @@ class GroupsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -108,7 +108,7 @@ class GroupsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
