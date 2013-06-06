@@ -61,7 +61,7 @@ class Groupssettings extends BrowserClient {
 
   Groupssettings([oauth.OAuth2 auth]) : super(auth) {
     basePath = "/groups/v1/groups/";
-    rootUrl = "https://www.googleapis.com:443/";
+    rootUrl = "https://www.googleapis.com/";
     _groups = new GroupsResource_(this);
   }
 }
