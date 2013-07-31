@@ -1,9 +1,11 @@
-part of groupssettings_v1_api_client;
+part of groupssettings_v1_api;
 
-class GroupsResource_ extends Resource {
+class GroupsResource_ {
 
-  GroupsResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  GroupsResource_(Client client) :
+      _client = client;
 
   /**
    * Gets one resource by id.

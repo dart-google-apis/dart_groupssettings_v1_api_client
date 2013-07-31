@@ -1,14 +1,18 @@
-library groupssettings_v1_api_console;
+library groupssettings_v1_api.console;
 
-import "groupssettings_v1_api_client.dart";
-export "groupssettings_v1_api_client.dart";
-
-import "dart:core" as core;
-import "dart:io" as io;
-import "dart:async" as async;
-import "dart:json" as JSON;
-import "package:http/http.dart" as http;
 import "package:google_oauth2_client/google_oauth2_console.dart" as oauth2;
 
-part "src/console/console_client.dart";
-part "src/console/groupssettings.dart";
+import 'package:google_groupssettings_v1_api/src/cloud_api_console.dart';
+
+import "package:google_groupssettings_v1_api/groupssettings_v1_api_client.dart";
+
+/** Lets you manage permission levels and related settings of a group. */
+class Groupssettings extends Client with ConsoleClient {
+
+  /** OAuth Scope2: View and manage the settings of a Google Apps Group */
+  static const String APPS_GROUPS_SETTINGS_SCOPE = "https://www.googleapis.com/auth/apps.groups.settings";
+
+  final oauth2.OAuth2Console auth;
+
+  Groupssettings([oauth2.OAuth2Console this.auth]);
+}
