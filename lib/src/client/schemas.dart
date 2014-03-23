@@ -66,11 +66,17 @@ class Groups {
   /** Moderation level for messages detected as spam. Possible values are: ALLOW MODERATE SILENTLY_MODERATE REJECT */
   core.String spamModerationLevel;
 
+  /** Permission to contact owner of the group via web UI. Possbile values are: ANYONE_CAN_CONTACT ALL_IN_DOMAIN_CAN_CONTACT ALL_MEMBERS_CAN_CONTACT ALL_MANAGERS_CAN_CONTACT */
+  core.String whoCanContactOwner;
+
   /** Permissions to invite members. Possbile values are: ALL_MEMBERS_CAN_INVITE ALL_MANAGERS_CAN_INVITE */
   core.String whoCanInvite;
 
   /** Permissions to join the group. Possible values are: ANYONE_CAN_JOIN ALL_IN_DOMAIN_CAN_JOIN INVITED_CAN_JOIN CAN_REQUEST_TO_JOIN */
   core.String whoCanJoin;
+
+  /** Permission to leave the group. Possible values are: ALL_MANAGERS_CAN_LEAVE ALL_MEMBERS_CAN_LEAVE */
+  core.String whoCanLeaveGroup;
 
   /** Permissions to post messages to the group. Possible values are: NONE_CAN_POST ALL_MANAGERS_CAN_POST ALL_MEMBERS_CAN_POST ALL_IN_DOMAIN_CAN_POST ANYONE_CAN_POST */
   core.String whoCanPostMessage;
@@ -146,11 +152,17 @@ class Groups {
     if (json.containsKey("spamModerationLevel")) {
       spamModerationLevel = json["spamModerationLevel"];
     }
+    if (json.containsKey("whoCanContactOwner")) {
+      whoCanContactOwner = json["whoCanContactOwner"];
+    }
     if (json.containsKey("whoCanInvite")) {
       whoCanInvite = json["whoCanInvite"];
     }
     if (json.containsKey("whoCanJoin")) {
       whoCanJoin = json["whoCanJoin"];
+    }
+    if (json.containsKey("whoCanLeaveGroup")) {
+      whoCanLeaveGroup = json["whoCanLeaveGroup"];
     }
     if (json.containsKey("whoCanPostMessage")) {
       whoCanPostMessage = json["whoCanPostMessage"];
@@ -230,11 +242,17 @@ class Groups {
     if (spamModerationLevel != null) {
       output["spamModerationLevel"] = spamModerationLevel;
     }
+    if (whoCanContactOwner != null) {
+      output["whoCanContactOwner"] = whoCanContactOwner;
+    }
     if (whoCanInvite != null) {
       output["whoCanInvite"] = whoCanInvite;
     }
     if (whoCanJoin != null) {
       output["whoCanJoin"] = whoCanJoin;
+    }
+    if (whoCanLeaveGroup != null) {
+      output["whoCanLeaveGroup"] = whoCanLeaveGroup;
     }
     if (whoCanPostMessage != null) {
       output["whoCanPostMessage"] = whoCanPostMessage;
