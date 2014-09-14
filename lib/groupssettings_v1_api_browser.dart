@@ -6,6 +6,7 @@ import 'package:google_groupssettings_v1_api/src/browser_client.dart';
 import "package:google_groupssettings_v1_api/groupssettings_v1_api_client.dart";
 
 /** Lets you manage permission levels and related settings of a group. */
+@deprecated
 class Groupssettings extends Client with BrowserClient {
 
   /** OAuth Scope2: View and manage the settings of a Google Apps Group */
